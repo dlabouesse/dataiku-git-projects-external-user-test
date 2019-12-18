@@ -1,11 +1,15 @@
 {
-  "type": "prediction_scoring",
+  "type": "python",
   "neverRecomputeExistingPartitions": false,
   "optionalDependencies": false,
   "params": {
+    "envSelection": {
+      "envMode": "INHERIT"
+    },
     "containerSelection": {
       "containerMode": "INHERIT"
-    }
+    },
+    "skipPrerunValidate": false
   },
   "customMeta": {
     "kv": {}
@@ -16,15 +20,7 @@
     "main": {
       "items": [
         {
-          "ref": "new_customers_prepared",
-          "deps": []
-        }
-      ]
-    },
-    "model": {
-      "items": [
-        {
-          "ref": "8A6fb5O8",
+          "ref": "new_customers",
           "deps": []
         }
       ]
@@ -34,18 +30,25 @@
     "main": {
       "items": [
         {
-          "ref": "new_customers_scored",
+          "ref": "out1",
           "appendMode": false
         }
       ]
     }
   },
   "versionTag": {
-    "versionNumber": 7,
+    "versionNumber": 1,
     "lastModifiedBy": {
-      "login": "admin"
+      "login": "giuliano"
     },
-    "lastModifiedOn": 1510826507744
+    "lastModifiedOn": 1576686687062
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "giuliano"
+    },
+    "lastModifiedOn": 1576686679007
   },
   "tags": [],
   "customFields": {},
